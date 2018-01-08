@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div title="123" id="app">
+        <span v-on:click="add">{{msg}}</span>
+        <img v-bind:src="url" alt="">
+        <input type="text" v-model="inputVal">
+        <p>
+            {{inputVal}}
+        </p>
+        {{inputVal}}
+    </div>
+    <script src="./js/observer.js"></script>
+    <script src="./js/compile.js"></script>
+    <script src="./js/watch.js"></script>
+    <script src="./js/mvvm.js"></script>
+    <script>
+        var m = new MVVM({
+            el: "#app",
+            data: {
+                msg: 123,
+                url: "https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png",
+                inputVal: "",
+            },
+            methods: {
+                add: function () {
+                    this.msg += 1;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
