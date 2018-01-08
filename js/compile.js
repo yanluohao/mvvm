@@ -108,9 +108,9 @@ var compileUtil = {
             val = newValue;
         });
     },
-    class: function (node, vm, exp) {
-        this.bind(node, vm, exp, 'class');
-    },
+    // class: function (node, vm, exp) {
+    //     this.bind(node, vm, exp, 'class');
+    // },
     bind: function (node, vm, exp, dir) {
         var updateFn = updater[dir + 'Updater'];
         updateFn && updateFn(node, vm[exp]);

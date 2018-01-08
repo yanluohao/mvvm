@@ -57,6 +57,8 @@ function Dep() {
 
 Dep.prototype = {
     addSub: function (sub) {
+        // 某属性在片段中被调用一次push一次
+        // sub对应一个Watcher
         this.subs.push(sub);
     },
     depend: function () {
