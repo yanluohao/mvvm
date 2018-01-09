@@ -12,7 +12,7 @@
     <div title="123" id="app">
         <span v-on:click="add">{{msg}}</span>
         <img v-bind:src="url" alt="">
-        <input type="text" v-model="inputVal">
+        <input type="text" v-model="val.name">
         <p>
             {{inputVal}}
         </p>
@@ -29,6 +29,9 @@
                 msg: 123,
                 url: "https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png",
                 inputVal: "",
+                val: {
+                    name: ""
+                }
             },
             methods: {
                 add: function () {
